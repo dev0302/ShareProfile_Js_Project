@@ -1,0 +1,196 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.wrapper{
+    height: 100vh;
+    width: 100vw;
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.container{
+    scale: 1; /* to hide */
+    color: white;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+    border: 2px solid #ffffff30;
+    height: 400px;
+    width: 300px;
+    border-radius: 0.8rem;
+    /* background-color: rgba(255, 255, 255, 0.082); */
+    background: #ffffff1a;
+    backdrop-filter: blur(15px);
+    box-shadow: rgba(136, 165, 191, 0.288) 6px 2px 16px 0px, rgba(219, 217, 217, 0.132) -6px -2px 16px 0px;
+}
+.button-group{
+    display: flex;
+    gap: 0.8rem;
+}
+.share-button{
+    border: 0.5px solid white;
+    background-color: rgba(255, 255, 255, 0.082);
+    padding: 0.5rem 0.8rem;
+    color: white;
+    border-radius: 0.3rem;
+    width: 110px;
+    font-size: 0.6rem;
+}
+.share-button:hover{
+    background-color: rgba(255, 255, 255, 0.735);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+#cross-button:hover{
+    background-color: white;
+    color: black;
+
+}
+#cross-button{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    border-radius: 50%;
+    padding: 0.2rem 0.4rem;
+    overflow: hidden;
+    
+}
+.follow-button{
+    border: 0.5px solid white;
+    background-color: rgba(255, 255, 255, 0.082);
+    padding: 0.5rem 0.8rem;
+    color: white;
+    border-radius: 0.3rem;
+    width: 110px;
+    font-size: 0.6rem;
+}
+.follow-button:hover{
+    background-color: rgba(255, 255, 255, 0.735);
+    color: rgb(0, 0, 0);
+    font-weight: 500;
+}
+.profile-image img{
+    height: 110px;
+    width: 110px;
+    border-radius: 50%;
+}
+.profile-name p{
+    font-weight: bold;
+    font-size: 1.5rem;
+}
+.profile-content{
+    font-size: 0.85rem;
+    color: rgb(128, 128, 128);
+    font-weight: 800;
+    margin-top: -1.8rem;
+}
+
+/* Modal */
+.modal-container{
+    /*
+    top: 50%;
+    left: 50%;
+    translate: -50% -50%;
+    border-radius: 20px;*/
+    scale: 0;
+    transition: 0.5s ease-in-out;
+    position: fixed;
+    border: 2px solid #ffffff59;
+    width: 28rem;
+    height: 11rem;
+    border-radius: 20px;
+    background: #00000088;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem 1.2rem;
+}
+.active{
+    scale:1;
+    z-index: 1;
+}
+.modal-title{
+    display: flex;
+    justify-content: space-between;
+    padding-bottom: 0.5rem;
+    border-bottom: 2px solid rgba(255, 255, 255, 0.329);
+}
+.modal-title p{
+    font-size: 1.2rem;
+    
+}
+.modal-desc p{
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+}
+.modal-icons{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.icon{
+    border: 1px solid #ffffff88;
+    padding: 17px;
+    border-radius: 50%;
+    width: 45px;
+    height: 45px;
+    display: flex;
+    align-items: center;
+    margin: 6px 0px;
+    gap: 10px;
+    justify-content: center;
+    transition: all 0.5s;
+    margin-bottom: 18px;
+    text-decoration: none;
+}
+
+.icon i {
+    font-size: 18px;
+  }
+#facebook{
+    color: rgb(46, 92, 241);
+    border: 1px solid #1771e6;
+}
+#twitter{
+    color: rgb(0, 183, 255);
+    border: 1px solid rgb(0, 183, 255);
+}
+#instagram{
+    color: rgb(211, 92, 112);
+    border: 1px solid rgb(211, 92, 112);
+}
+#whatsapp {
+    color: #2fe664;
+    border: 1px solid #2fe664;
+  }
+#telegram {
+    color: #0081c2;
+    border: 1px solid #0081c2;
+  }
+.icon:hover{
+    background-color: rgba(222, 211, 211, 0.742);
+    transition: 0.2s all ease-in;
+    backdrop-filter: blur(15px);
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #5f5f5f83;
+    opacity: 0;
+    pointer-events: none;
+}
+.overlayactive{
+    opacity: 1;
+    pointer-events: initial;
+    z-index: 0;
+}
